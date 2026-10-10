@@ -6,7 +6,7 @@ window.SITE_CONFIG = {
  introExtra:"خد وقتك… كل خطوة هتقربك من المفاجأة.", startButton:"ابدأ الرحلة",
  quizTitle:"فاكر التفاصيل؟", finalTitle:"اهل بيك يضي عيوني",
  signature:"༺💗༻ 𝑨𝒉𝒍𝒂 𝑩𝒆𝒆𝒌 𝒀𝒂𝒛𝒐𝒐𝒕𝒐، أَنَـا سِتْهُـم 🐇 ༺💗༻",
- hintText:"اكتر كلمه انا قولتها فكر كويس يا zooto",
+ hintText:"اكتر كلمه اتكررت ف السايت فكر كويس يا zooto",
  photos:["images/photo-1.png","images/photo-2.png"], password:"zooto",
  questions:[
  {q:"انا بحب اكل ايه؟",a:"زياد"},
