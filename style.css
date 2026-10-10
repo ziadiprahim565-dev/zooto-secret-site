@@ -35,3 +35,45 @@
   white-space: normal;
   line-height: 1.7;
 }
+.zooto-signature-global {
+  border: 1px solid rgba(100, 190, 255, 0.9);
+  border-radius: 18px;
+  background: linear-gradient(
+    135deg,
+    rgba(12, 38, 78, 0.92),
+    rgba(5, 14, 36, 0.95)
+  );
+  box-shadow:
+    0 0 12px rgba(57, 163, 255, 0.75),
+    0 0 28px rgba(57, 163, 255, 0.45),
+    inset 0 0 15px rgba(57, 163, 255, 0.15);
+  animation: zootoSignatureGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes zootoSignatureGlow {
+  from {
+    box-shadow: 0 0 8px rgba(57, 163, 255, 0.5),
+      0 0 16px rgba(57, 163, 255, 0.25);
+  }
+  to {
+    box-shadow: 0 0 16px rgba(90, 195, 255, 0.95),
+      0 0 32px rgba(57, 163, 255, 0.65);
+  }
+}
+
+.zooto-signature-global::before,
+.zooto-signature-global::after {
+  content: "💗";
+  display: inline-block;
+  margin: 0 8px;
+  animation: zootoHeartFloat 1.8s ease-in-out infinite alternate;
+}
+
+.zooto-signature-global::after {
+  animation-delay: 0.9s;
+}
+
+@keyframes zootoHeartFloat {
+  from { transform: translateY(0) scale(1); }
+  to { transform: translateY(-5px) scale(1.2); }
+}
