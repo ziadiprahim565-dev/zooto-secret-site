@@ -237,3 +237,79 @@ body::after {
   from { transform: translate(-4%, -2%) scale(0.95); }
   to { transform: translate(5%, 4%) scale(1.18); }
 }
+/* ⚡ HIGH ENERGY GALAXY */
+body {
+  background-size: 250% 250% !important;
+  animation: actionGalaxy 5s ease-in-out infinite alternate !important;
+}
+
+@keyframes actionGalaxy {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 80%; }
+  100% { background-position: 0% 100%; }
+}
+
+/* 💥 Fast shooting stars */
+body::after {
+  content: "💙  ✦  💗  ✧";
+  white-space: nowrap;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: max-content;
+  color: #bdeaff;
+  font-size: 32px;
+  text-shadow: 0 0 12px #168bff, 0 0 35px #58baff;
+  pointer-events: none;
+  z-index: 2;
+  animation: fastComet 2.2s linear infinite !important;
+}
+
+@keyframes fastComet {
+  0% {
+    transform: translate(-10vw, 10vh) rotate(-12deg) scale(.6);
+    opacity: 0;
+  }
+  10% { opacity: 1; }
+  100% {
+    transform: translate(120vw, 75vh) rotate(-12deg) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* ✨ Rapid star movement */
+.stars {
+  animation: starsDrift 4s linear infinite,
+             starsTwinkle .65s ease-in-out infinite alternate !important;
+}
+
+@keyframes starsDrift {
+  from { transform: translate(-70px, -50px); }
+  to { transform: translate(180px, 130px); }
+}
+
+@keyframes starsTwinkle {
+  from { opacity: .2; }
+  to { opacity: 1; }
+}
+
+/* 💗 Floating heart decorations */
+.zooto-signature-global::before,
+.zooto-signature-global::after {
+  animation: heartAction .55s ease-in-out infinite alternate !important;
+}
+
+@keyframes heartAction {
+  from { transform: translateY(5px) scale(.8) rotate(-12deg); }
+  to { transform: translateY(-9px) scale(1.45) rotate(12deg); }
+}
+
+/* 💫 Pulsing blue light */
+.nebula {
+  animation: nebulaAction 5s ease-in-out infinite alternate !important;
+}
+
+@keyframes nebulaAction {
+  0% { transform: translate(-5%, -4%) scale(.8); opacity: .35; }
+  100% { transform: translate(6%, 5%) scale(1.25); opacity: 1; }
+}
