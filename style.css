@@ -380,3 +380,27 @@ body::after {
   left: 0;
   top: 0;
 }
+
+/* Make ZOOTO background text bold and readable */
+.zooto-floater {
+  font-family: "Segoe UI", "Arial", sans-serif !important;
+  font-size: clamp(30px, 5vw, 54px) !important;
+  font-weight: 900 !important;
+  color: #ffffff !important;
+  opacity: 1 !important;
+  -webkit-text-stroke: 1px rgba(255, 180, 225, 0.8);
+  text-shadow:
+    0 0 3px #ffffff,
+    0 0 8px #ff69c9,
+    0 0 18px #ff38b8,
+    0 0 32px #168bff !important;
+  filter: drop-shadow(0 0 8px rgba(255, 75, 190, 0.9));
+}
+
+.zooto-background .zooto-floater {
+  opacity: 1;
+  background: rgba(2, 8, 25, 0.35);
+  padding: 8px 14px;
+  border: 1px solid rgba(255, 150, 220, 0.45);
+  border-radius: 16px;
+}
