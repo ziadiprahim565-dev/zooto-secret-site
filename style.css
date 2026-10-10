@@ -313,3 +313,70 @@ body::after {
   0% { transform: translate(-5%, -4%) scale(.8); opacity: .35; }
   100% { transform: translate(6%, 5%) scale(1.25); opacity: 1; }
 }
+
+/* ZOOTO — Fast floating background words */
+.zooto-floater {
+  position: fixed;
+  z-index: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  font-family: "Segoe UI", sans-serif;
+  font-size: clamp(22px, 4vw, 42px);
+  font-weight: 900;
+  color: #b9e5ff;
+  text-shadow:
+    0 0 8px #39a9ff,
+    0 0 20px #168bff,
+    0 0 38px #176dff;
+  opacity: 0;
+  animation: zootoFly 7s linear infinite;
+}
+
+@keyframes zootoFly {
+  0% {
+    transform: translate(-15vw, 110vh) rotate(-12deg) scale(.7);
+    opacity: 0;
+  }
+  12% { opacity: .85; }
+  50% {
+    transform: translate(48vw, 35vh) rotate(8deg) scale(1.15);
+    opacity: .8;
+  }
+  88% { opacity: .75; }
+  100% {
+    transform: translate(115vw, -15vh) rotate(-8deg) scale(.85);
+    opacity: 0;
+  }
+}
+
+.zooto-floater:nth-child(2) {
+  animation-duration: 5s;
+  animation-delay: -2s;
+  font-size: clamp(25px, 4.5vw, 48px);
+  color: #ffd8f0;
+  text-shadow: 0 0 10px #ff5fb7, 0 0 28px #d62991;
+}
+
+.zooto-floater:nth-child(3) {
+  animation-duration: 6s;
+  animation-delay: -4s;
+}
+
+.zooto-floater:nth-child(4) {
+  animation-duration: 4.5s;
+  animation-delay: -1s;
+  color: #fff0fb;
+}
+
+.zooto-background {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.zooto-background .zooto-floater {
+  left: 0;
+  top: 0;
+}
