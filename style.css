@@ -157,3 +157,83 @@ main, header, .panel {
     animation: none !important;
   }
 }
+/* 💗 Floating hearts across the galaxy */
+body::before {
+  content: "💙   💗      ♡       💜       💖      🤍";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  font-size: 24px;
+  letter-spacing: 28px;
+  line-height: 125px;
+  overflow: hidden;
+  opacity: 0.65;
+  overflow-wrap: anywhere;
+  animation: heartsRain 9s linear infinite;
+}
+
+@keyframes heartsRain {
+  0% {
+    transform: translateY(100vh) translateX(0);
+    opacity: 0;
+  }
+  15% { opacity: 0.7; }
+  85% { opacity: 0.7; }
+  100% {
+    transform: translateY(-110vh) translateX(35px);
+    opacity: 0;
+  }
+}
+
+/* ✨ Faster drifting stars */
+.stars {
+  animation: starsDrift 12s linear infinite,
+             starsTwinkle 1.8s ease-in-out infinite alternate !important;
+}
+
+@keyframes starsDrift {
+  from { transform: translate3d(-30px, -40px, 0); }
+  to { transform: translate3d(120px, 100px, 0); }
+}
+
+/* ☄️ Blue shooting stars */
+body::after {
+  content: "✦";
+  position: fixed;
+  top: 15%;
+  left: -10%;
+  color: #a9ddff;
+  font-size: 30px;
+  text-shadow: 0 0 10px #38aaff, 0 0 28px #168bff;
+  pointer-events: none;
+  z-index: 0;
+  animation: shootingStar 4s linear infinite;
+}
+
+@keyframes shootingStar {
+  0% {
+    left: -10%;
+    top: 15%;
+    opacity: 0;
+    transform: rotate(25deg) scale(0.5);
+  }
+  10% { opacity: 1; }
+  65% { opacity: 1; }
+  100% {
+    left: 110%;
+    top: 65%;
+    opacity: 0;
+    transform: rotate(25deg) scale(1.4);
+  }
+}
+
+/* 💫 Brighter, faster nebula */
+.nebula {
+  animation: nebulaDrift 10s ease-in-out infinite alternate !important;
+}
+
+@keyframes nebulaDrift {
+  from { transform: translate(-4%, -2%) scale(0.95); }
+  to { transform: translate(5%, 4%) scale(1.18); }
+}
