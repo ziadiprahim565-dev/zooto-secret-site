@@ -77,3 +77,83 @@
   from { transform: translateY(0) scale(1); }
   to { transform: translateY(-5px) scale(1.2); }
 }
+/* Moving galaxy background */
+body {
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(20, 83, 170, 0.22), transparent 45%),
+    radial-gradient(ellipse at 80% 70%, rgba(35, 95, 210, 0.18), transparent 42%),
+    linear-gradient(150deg, #020817, #071a38, #020611);
+  background-size: 150% 150%;
+  animation: galaxyBreathing 18s ease-in-out infinite alternate;
+  overflow-x: hidden;
+}
+
+@keyframes galaxyBreathing {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 60%;
+  }
+  100% {
+    background-position: 20% 100%;
+  }
+}
+
+/* Twinkling stars */
+.stars {
+  position: fixed;
+  inset: -50%;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    radial-gradient(2px 2px at 10% 20%, #d8eeff 70%, transparent),
+    radial-gradient(1px 1px at 30% 65%, #8bc8ff 70%, transparent),
+    radial-gradient(2px 2px at 75% 25%, #ffffff 70%, transparent),
+    radial-gradient(1px 1px at 60% 80%, #8bc8ff 70%, transparent),
+    radial-gradient(2px 2px at 90% 55%, #d8eeff 70%, transparent),
+    radial-gradient(1px 1px at 45% 40%, #ffffff 70%, transparent);
+  background-size: 320px 280px;
+  animation: starsDrift 35s linear infinite,
+             starsTwinkle 4s ease-in-out infinite alternate;
+}
+
+@keyframes starsDrift {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(100px, 80px, 0); }
+}
+
+@keyframes starsTwinkle {
+  from { opacity: 0.35; }
+  to { opacity: 1; }
+}
+
+/* Slow blue nebula */
+.nebula {
+  position: fixed;
+  inset: -20%;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse at 25% 35%, rgba(24, 105, 220, 0.13), transparent 35%),
+    radial-gradient(ellipse at 75% 65%, rgba(55, 125, 255, 0.10), transparent 38%);
+  filter: blur(28px);
+  animation: nebulaDrift 24s ease-in-out infinite alternate;
+}
+
+@keyframes nebulaDrift {
+  from { transform: translate(-2%, -1%) scale(1); }
+  to { transform: translate(3%, 2%) scale(1.12); }
+}
+
+/* Keep website content above the background */
+main, header, .panel {
+  position: relative;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body, .stars, .nebula {
+    animation: none !important;
+  }
+}
