@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#030817"><title>المكان ده معمول عشانك</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="stars stars-a"></div><div class="stars stars-b"></div><div class="nebula"></div>
+<main class="shell">
+<header class="brand"><span class="brand-mark">✦</span><span id="site-name">A PRIVATE UNIVERSE</span><span class="brand-mark">✦</span></header>
+
+<section class="panel intro-panel" id="intro-view">
+  <p class="eyebrow" id="intro-kicker">A NOTE FOR YOU</p>
+  <h1 id="intro-title">المكان ده معمول عشانك إنت وبس</h1>
+  <div class="rule"></div>
+  <div id="intro-message" class="message"></div>
+  <div id="photo-gallery" class="gallery"></div>
+  <p id="intro-extra" class="muted"></p>
+  <button id="start-btn" class="button">ابدأ الرحلة <span>←</span></button>
+</section>
+
+<section class="panel hidden" id="quiz-view">
+  <p class="eyebrow">YOUR JOURNEY / 01</p><h1 id="quiz-title">خلينا نفتكر شوية حاجات</h1>
+  <div class="progress-wrap"><div id="progress-bar"></div></div><p id="progress-label" class="progress-label">السؤال 1 من 10</p>
+  <form id="quiz-form" autocomplete="off"><div id="question-stage"></div><p class="error" id="quiz-error" role="alert"></p>
+  <button class="button" type="submit" id="quiz-submit">تأكيد الإجابة <span>←</span></button></form>
+</section>
+
+<section class="panel hidden vault-panel" id="password-view">
+  <p class="eyebrow">THE SECRET VAULT / 02</p>
+  <div class="vault">
+    <div class="vault-ring ring-one"></div><div class="vault-ring ring-two"></div>
+    <div class="heart">♥</div>
+    <div class="vault-input-wrap"><input id="password-input" type="password" required placeholder="••••••••" autocomplete="off" aria-label="كلمة السر"></div>
+  </div>
+  <h1>باقي سر واحد</h1><p class="muted">الخزنة مستنياك… خُد وقتك.</p>
+  <button type="button" id="hint-toggle" class="hint-toggle">✦ اكشف التلميح ✦</button>
+  <p id="hint-text" class="hint-text hidden"></p>
+  <form id="password-form" autocomplete="off"><p class="error" id="password-error" role="alert"></p><button class="button" type="submit" id="password-submit">افتح الخزنة <span>←</span></button></form>
+</section>
+
+<section class="panel final-panel hidden" id="final-view">
+  <p class="eyebrow">ONLY FOR YOU</p><div class="final-star">✧</div>
+  <h1 id="final-title">رسالة خاصة لك</h1><div class="rule"></div>
+  <div id="final-message" class="message"></div><p class="signature" id="signature"></p>
+</section>
+<footer>MADE OF STARS <span>✦</span></footer>
+</main>
+<script src="config.js"></script><script src="app.js"></script>
+</body></html>
